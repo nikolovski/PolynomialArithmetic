@@ -17,12 +17,8 @@ public:
     Polynomial operator-(const Polynomial& poly);
     Polynomial operator*(const Polynomial& poly);
     void printPoly();
-
     ~Polynomial();
-
-
     Term *getFirst() const;
-
     void setFirst(Term *first);
 };
 

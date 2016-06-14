@@ -4,14 +4,19 @@
 #include "Term.h"
 #include "Polynomial.h"
 using namespace std;
+
 int countLines(string file);
+void printHeader();
 
 int main(int argc,char *argv[]) {
+    printHeader();
     if(argc!=2) {
-        cout<<"Please enter file as an input parameter containing polynomials"<<endl;
+        cout<<"Please enter file as an input parameter containing polynomials. It is recommended that the full directory"
+                "+ filename + extension is entered."<<endl;
         exit(1);
     }
     string filename= argv[1];
+
     int poly_count=countLines(filename);
 
     Polynomial *polynomials = new Polynomial[poly_count];
@@ -66,4 +71,15 @@ int countLines(string file){
     }
     infile.close();
     return count;
+}
+
+void printHeader(){
+    cout<<"Polynomial Arithmetic provided by\n"
+                  "          .--.  ,---.  _______ ,-..-. .-. .---.\n"
+                  "|\\    /| / /\\ \\ | .-.\\|__   __||(||  \\| |/ .-. )\n"
+                  "|(\\  / |/ /__\\ \\| `-'/  )| |   (_)|   | || | |(_)\n"
+                  "(_)\\/  ||  __  ||   (  (_) |   | || |\\  || | | |\n"
+                  "| \\  / || |  |)|| |\\ \\   | |   | || | |)|\\ `-' /\n"
+                  "| |\\/| ||_|  (_)|_| \\)\\  `-'   `-'/(  (_) )---'\n"
+                  "'-'  '-'            (__)         (__)    (_)"<<endl<<endl;
 }
