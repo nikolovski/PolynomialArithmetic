@@ -68,6 +68,23 @@ Polynomial Polynomial::operator-(const Polynomial& poly){
     delete current;
     return polynomial;
 }
+Polynomial Polynomial::operator*(const Polynomial& poly){
+    Polynomial polynomial;
+    Term * temp1 = first->getNext_term();
+    Term * temp2 = poly.first->getNext_term();
+    Term * current;
+    while (temp1!=NULL) {
+        temp2=poly.first->getNext_term();
+        while(temp2!=NULL){
+            current=new Term(temp1->getCoeficient()*temp2->getCoeficient(),temp1->getPower()+temp2->getPower());
+            polynomial.insertTerm(*current);
+            temp2=temp2->getNext_term();
+        }
+        temp1=temp1->getNext_term();
+    }
+    delete current;
+    return polynomial;
+}
 
 void Polynomial::printPoly() {
     Term *temp = first->getNext_term();

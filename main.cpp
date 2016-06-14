@@ -6,8 +6,12 @@
 using namespace std;
 int countLines(string file);
 
-int main() {
-    string filename= "/Users/d4k1d23/ClionProjects/PolynomialArithmetic/input.txt";
+int main(int argc,char *argv[]) {
+    if(argc!=2) {
+        cout<<"Please enter file as an input parameter containing polynomials"<<endl;
+        exit(1);
+    }
+    string filename= argv[1];
     int poly_count=countLines(filename);
 
     Polynomial *polynomials = new Polynomial[poly_count];
@@ -29,12 +33,24 @@ int main() {
     }
     //printing the polynomials
     for (int i = 0; i < poly_count; ++i) {
+        cout<<"Polynomial "<<(i+1)<<":"<<endl;
         polynomials[i].printPoly();
-        cout<<endl;
+        cout<<endl<<endl;
     }
 
-    Polynomial polynomial = polynomials[0]-polynomials[1];
-    polynomial.printPoly();
+    //Polynomial operations
+    for (int j = 0; j < poly_count; j+=2) {
+        //addition
+        cout<<"Polynomial "<<(j+1)<<" + Polynomial "<<(j+2)<<":"<<endl;
+        (polynomials[j]+polynomials[j+1]).printPoly();
+        cout<<endl<<endl;
+        cout<<"Polynomial "<<(j+1)<<" - Polynomial "<<(j+2)<<":"<<endl;
+        (polynomials[j]-polynomials[j+1]).printPoly();
+        cout<<endl<<endl;
+        cout<<"Polynomial "<<(j+1)<<" * Polynomial "<<(j+2)<<":"<<endl;
+        (polynomials[j]*polynomials[j+1]).printPoly();
+        cout<<endl<<endl;
+    }
     delete [] polynomials;
     infile.close();
     return 0;
