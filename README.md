@@ -28,5 +28,5 @@ Then compute and output, all in canonical form:
 4. Their product (multiply them).
 Output them to a file in your program’s directory called output.txt
 
-<h3>Online Demo: </h3> 
+<h3>Online Demo: </h3> http://goo.gl/fEMXNR
 <p>Note: First click on <em><b>Compile</b></em> then <em><b>Execute</b></em>. If there are issues with compiling or running, please click this link again and make sure all files are listed on the left side.</p>
