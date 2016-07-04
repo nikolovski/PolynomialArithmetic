@@ -21,6 +21,7 @@ public:
 
     int getCoeficient() const;
 
+
     void setCoeficient(int coeficient);
 
     int getPower() const;

@@ -49,9 +49,11 @@ int main(int argc,char *argv[]) {
         cout<<"Polynomial "<<(j+1)<<" + Polynomial "<<(j+2)<<":"<<endl;
         (polynomials[j]+polynomials[j+1]).printPoly();
         cout<<endl<<endl;
+        //subtraction
         cout<<"Polynomial "<<(j+1)<<" - Polynomial "<<(j+2)<<":"<<endl;
         (polynomials[j]-polynomials[j+1]).printPoly();
         cout<<endl<<endl;
+        //multiplication
         cout<<"Polynomial "<<(j+1)<<" * Polynomial "<<(j+2)<<":"<<endl;
         (polynomials[j]*polynomials[j+1]).printPoly();
         cout<<endl<<endl;
