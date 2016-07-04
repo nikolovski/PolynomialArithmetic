@@ -27,5 +27,5 @@ coefficient and exponent of each of the terms in the polynomial.
 <br>4. Their product (multiply them).
 <br>Output them to a file in your program’s directory called output.txt
 
-<h3>Online Demo: </h3> http://goo.gl/fEMXNR
+<h3>Online Demo: http://goo.gl/fEMXNR</h3>
 <p>Note: First click on <em><b>Compile</b></em> then <em><b>Execute</b></em>. If there are issues with compiling or running, please click this link again and make sure all files are listed on the left side.</p>
