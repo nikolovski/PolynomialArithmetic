@@ -1,5 +1,5 @@
 <h1> PolynomialArithmetic </h1>
-<p>Write a program to input pairs of polynomials and output:</p>
+Write a program to input pairs of polynomials and output:
 <br>Output them in canonical form. Then compute and output:
 <br>1. Their sum (add them)
 <br>2. Their difference (subtract them)
